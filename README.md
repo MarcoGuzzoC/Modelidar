@@ -58,6 +58,8 @@ Nous avions également des contraintes mécaniques liées aux dimensions du pani
 
 ### Chargeur de batterie : 
 
-Qui dit batterie rechargeable dit station de recharge. Nous avions dans notre laboratoire la station trouvable [ici]()
+Qui dit batterie rechargeable dit station de recharge. Nous avions dans notre laboratoire la station trouvable [ici](https://www.flashrc.com/graupner/4629-chargeur_ultra_trio_plus_14_12v_220v_graupner.html). 
+
+Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du chargeur. Ce faisant nous avons dû démonter et dessouder les différentes pins pour en mettre de nouveaux. Il faut également réaliser de nouveaux câbles pour relier la batterie à la station. Pour se faire on soude aux câbles un pin supplémentaire 
 
 

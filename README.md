@@ -55,6 +55,23 @@ Au total nous avons besoin de **30.0A** à **7.4V** pour nous prévenir d'un que
 
 Nous avions également des contraintes mécaniques liées aux dimensions du panier sous notre chariot (6cmx12cmx3cm) ainsi nous avons choisi de prendre deux batteries [*Gens Ace 5000mAh 7.4V 2S2P 60C*](https://www.genstattu.com/2s-7-4v-lipo-battery.html?_bc_fsnf=1&Voltage%28V%29=7.4&Capacity+Range%28mAh%29=3000-5999 )
 
+### Experience complémentaire :
+
+![picture](exp.png)
+
+Une question qui a piqué notre intérêt car potentiellement problématique : le pic de courant au démarrage. Pour tester cela nous avons alimenté tous les composants à l'aide de quatre alimentations de laboratoire. Nous avons ensuite branché un ampèremètre le but étant de mesurer le pic de courant et le comparer à 10A. Vous trouverez ci-contre les résultats :
+
+| Tension appliquée aux moteurs  | Pourcentage de tension (vis à vis de 7.4V) | Mouvement des roues ? | Pic de courant |
+| ------------- | ------------- | ------------- | ------------- |
+| 2.3V  | 30%  | Non  | 5.4A  |
+| 3.1V  | 41%  | Oui  | 5.4A  |
+| 4.0V  | 53%  | Oui  | 5.5A  |
+| >4.5V  | >60%  | Oui  | Overload  |
+
+Nous pouvons observer que sous 30% de la tension nominale les moteurs ne tournent même pas et donc le robot ne peut pas se déplacer et qu'au delà de 60% le pic de courant est au delà des 10.0A et ne rentre plus dans ce que nous nous étions imposé. Alors par choix et parce que c'est la plus haute valeur qui fonctionne nous décidons de choisir une tension à 53% de tension nominale. 
+
+Cela permettra d'imposer via notre micro-controlleur (une *Nucleo-64 STM32*) un rapport cyclique d'au plus 50%.  
+
 
 ### Chargeur de batterie : 
 
@@ -62,5 +79,10 @@ Qui dit batterie rechargeable dit station de recharge. Nous avions dans notre la
 
 Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du chargeur. Ce faisant nous avons dû démonter et dessouder les différentes pins pour en mettre de nouveaux. Il faut également réaliser de nouveaux câbles pour relier la batterie à la station. Pour se faire on soude aux câbles un pin supplémentaire. On réalise également un adaptateur pour veiller à éviter tout court-circuit et pouvoir brancher notre système à trois câbles sur n'importe quel port mais nous en parlerons dans une section suivante. 
 
+![picture](chargeur.png)
 
+### Conversion de puissance :
 
+Comme nous l'avons vu précédemment peu voire aucun de nos composants ne s'alimentait de la même manière. En effet nous partons d'une source à 7.4V et nous avons tantôt une demande de 12V (LIDAR) tantôt une demande de 5V (Raspberry) et les moteurs qui peuvent très bien prendre du 7.4V. Pour palier à ce problème nous avons utilisé deux convertisseurs de puissances : un abaisseur ([BUCK](https://www.amazon.fr/6paquets-Converter-3-0-40V-1-5-35V-Convertisseur/dp/B07793ZH9K/ref=sr_1_93?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=327FLL2LJ15IP&keywords=convertisseur+buck+7v+5v&qid=1653306791&sprefix=convertisseur+buck+7v+5v%2Caps%2C59&sr=8-93)) envoyant une tension 3.0V-40.0V vers du 1.5V-35V qu'on utilisera pour notre RaspberryPi et un amplificateur ([BOOST](https://www.amazon.fr/ARCELI-R%C3%A9glable-Commutation-Convertisseur-Alimentation/dp/B07MY3NZ18/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=EVHACJKT0R2C&keywords=convertisseur+boost+7v+10v&qid=1653307477&sprefix=convertisseur+boost+7v+10v%2Caps%2C50&sr=8-2)) envoyant du 2.0V-24.0V vers du 5.0V-28.0V qu'on utilisera pour le LIDAR.
+
+Le choix de ces composants à été fait car ils répondaient au cahier des charges - même le *BUCK* qui avait comme contrainte d'avoir V<sub>sortie</sub> < V<sub>entrée</sub> - 1.5 - et surtout étaient certains d'arriver dans les temps.

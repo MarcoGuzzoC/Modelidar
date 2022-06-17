@@ -97,6 +97,6 @@ Afin d'assurer une stabilité optimale à notre robot et de faire en sorte d'har
 
 ### Création 3D
 
-<p align="center"> <img src="cam.png" /> </p>
+<p align="center"> <img src="cam1.png" /> </p>
 
-
+Pour la fixation de la caméra il a été jugé bon de réaliser un support grâce à une impression 3D. Le support a été mesuré dans le but d'être fixé aisément sur le robot. On choisit donc un pas centimétrique. Le support est pourvu d'une encoche dans laquelle glisse parfaitement la caméra..

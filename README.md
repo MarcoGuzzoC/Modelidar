@@ -1,8 +1,9 @@
-![picture](ModeLidar2.png)
+<p align="right"> <img src="Mode_Lidar.png" /> </p>
+
 # Modelidar
 > ***Projet MODELIDAR 2022 conception d'une plateforme motorisée et acquisition des données d'un LIDAR via ROS***
 
-![picture](cdc_modelidar.png)
+<p align="center"> <img src="cdc_modelidar.png" /> </p>
 
 
 ## Présentation générale du projet : 
@@ -57,8 +58,7 @@ Au total nous avons besoin de **30.0A** à **7.4V** pour nous prévenir d'un que
 Nous avions également des contraintes mécaniques liées aux dimensions du panier sous notre chariot (6cmx12cmx3cm) ainsi nous avons choisi de prendre deux batteries [*Gens Ace 5000mAh 7.4V 2S2P 60C*](https://www.genstattu.com/2s-7-4v-lipo-battery.html?_bc_fsnf=1&Voltage%28V%29=7.4&Capacity+Range%28mAh%29=3000-5999 )
 
 ### Experience complémentaire :
-
-![picture](exp.png)
+<p align="center"> <img src="exp.png" /> </p>
 
 Une question qui a piqué notre intérêt car potentiellement problématique : le pic de courant au démarrage. Pour tester cela nous avons alimenté tous les composants à l'aide de quatre alimentations de laboratoire. Nous avons ensuite branché un ampèremètre le but étant de mesurer le pic de courant et le comparer à 10A. Vous trouverez ci-contre les résultats :
 
@@ -80,7 +80,7 @@ Qui dit batterie rechargeable dit station de recharge. Nous avions dans notre la
 
 Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du chargeur. Ce faisant nous avons dû démonter et dessouder les différentes pins pour en mettre de nouveaux. Il faut également réaliser de nouveaux câbles pour relier la batterie à la station. Pour se faire on soude aux câbles un pin supplémentaire. On réalise également un adaptateur pour veiller à éviter tout court-circuit et pouvoir brancher notre système à trois câbles sur n'importe quel port mais nous en parlerons dans une section suivante. 
 
-![picture](chargeur.png)
+<p align="center"> <img src="chargeur.png" /> </p>
 
 ### Conversion de puissance :
 
@@ -92,7 +92,11 @@ Le choix de ces composants à été fait car ils répondaient au cahier des char
 
 ### Répartition de masse et organisation du Robot
 
-Afin d'assurer une stabilité optimale à notre robot et de faire en sorte d'harmoniser le travail à fournir de chaque moteur nous avons réalisé une étude des différentes masses afin d'organiser au mieux chaque élément sur le robot. Notre contrainte ? Accorder au LIDAR une visibilité maximale pour pouvoir étudier rapidement le plus d'espace possible tout en s'assurant qu'il soit assez stable et protégé en cas de chute ou impact du robot. Ce faisant nous 
+Afin d'assurer une stabilité optimale à notre robot et de faire en sorte d'harmoniser le travail à fournir de chaque moteur nous avons réalisé une étude des différentes masses afin d'organiser au mieux chaque élément sur le robot. Notre contrainte ? Accorder au LIDAR une visibilité maximale pour pouvoir étudier rapidement le plus d'espace possible tout en s'assurant qu'il soit assez stable et protégé en cas de chute ou impact du robot. Ce faisant nous avons décidé de placer notre LIDAR au centre de la plateforme supérieure et de fixer nos composants annexes sous cette même plateforme. Nous avons ensuite fixé la STM32 sur la plateforme inférieure. Les batteries rentrent parfaitement dans le petit bac que contient notre robot.
 
 
 ### Création 3D
+
+<p align="center"> <img src="cam.png" /> </p>
+
+

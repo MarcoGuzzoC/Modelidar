@@ -86,3 +86,12 @@ Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du cha
 Comme nous l'avons vu précédemment peu voire aucun de nos composants ne s'alimentait de la même manière. En effet nous partons d'une source à 7.4V et nous avons tantôt une demande de 12V (LIDAR) tantôt une demande de 5V (Raspberry) et les moteurs qui peuvent très bien prendre du 7.4V. Pour palier à ce problème nous avons utilisé deux convertisseurs de puissances : un abaisseur ( [*BUCK*](https://www.amazon.fr/6paquets-Converter-3-0-40V-1-5-35V-Convertisseur/dp/B07793ZH9K/ref=sr_1_93?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=327FLL2LJ15IP&keywords=convertisseur+buck+7v+5v&qid=1653306791&sprefix=convertisseur+buck+7v+5v%2Caps%2C59&sr=8-93) ) envoyant une tension 3.0V-40.0V vers du 1.5V-35V qu'on utilisera pour notre RaspberryPi et un amplificateur ( [*BOOST*](https://www.amazon.fr/ARCELI-R%C3%A9glable-Commutation-Convertisseur-Alimentation/dp/B07MY3NZ18/ref=sr_1_2?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=EVHACJKT0R2C&keywords=convertisseur+boost+7v+10v&qid=1653307477&sprefix=convertisseur+boost+7v+10v%2Caps%2C50&sr=8-2) ) envoyant du 2.0V-24.0V vers du 5.0V-28.0V qu'on utilisera pour le LIDAR.
 
 Le choix de ces composants à été fait car ils répondaient au cahier des charges - même le *BUCK* qui avait comme contrainte d'avoir V<sub>sortie</sub> < V<sub>entrée</sub> - 1.5 - et surtout étaient certains d'arriver dans les temps. À leur réception nous les avons directement testés à l'aide d'une alimentation de laboratoire et avons réglé le potentiomètre pour fixer leur tension de sortie. 
+
+## Etude Mécanique
+
+### Répartition de masse et organisation du Robot
+
+Afin d'assurer une stabilité optimale à notre robot et de faire en sorte d'harmoniser le travail à fournir de chaque moteur nous avons réalisé une étude des différentes masses afin d'organiser au mieux chaque élément sur le robot. Notre contrainte ? Accorder au LIDAR une visibilité maximale pour pouvoir étudier rapidement le plus d'espace possible tout en s'assurant qu'il soit assez stable et protégé en cas de chute ou impact du robot. Ce faisant nous 
+
+
+### Création 3D

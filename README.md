@@ -1,6 +1,8 @@
 # Modelidar
 > ***Projet MODELIDAR 2022 conception d'une plateforme motorisée et acquisition des données d'un LIDAR via ROS***
 
+![picture](/assets/images/Capture_d_écran_2022-06-17_090028-removebg-preview.png)
+
 
 ## Présentation générale du projet : 
 

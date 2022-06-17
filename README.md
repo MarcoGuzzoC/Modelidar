@@ -60,6 +60,7 @@ Nous avions également des contraintes mécaniques liées aux dimensions du pani
 
 Qui dit batterie rechargeable dit station de recharge. Nous avions dans notre laboratoire la station trouvable [ici](https://www.flashrc.com/graupner/4629-chargeur_ultra_trio_plus_14_12v_220v_graupner.html). 
 
-Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du chargeur. Ce faisant nous avons dû démonter et dessouder les différentes pins pour en mettre de nouveaux. Il faut également réaliser de nouveaux câbles pour relier la batterie à la station. Pour se faire on soude aux câbles un pin supplémentaire 
+Nonobstant, nos cables et nos connecteurs n'étaient pas adaptés à ceux du chargeur. Ce faisant nous avons dû démonter et dessouder les différentes pins pour en mettre de nouveaux. Il faut également réaliser de nouveaux câbles pour relier la batterie à la station. Pour se faire on soude aux câbles un pin supplémentaire. On réalise également un adaptateur pour veiller à éviter tout court-circuit et pouvoir brancher notre système à trois câbles sur n'importe quel port mais nous en parlerons dans une section suivante. 
+
 
 
